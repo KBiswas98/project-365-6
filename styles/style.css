@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap");
+body {
+  font-family: "Muli";
+  background-color: #fbfbfb;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.avater {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
+}
+
+.navbar {
+  padding: 10px 30px 10px 10px;
+  background-color: #8f8f8f0a;
+}
+
+.navbar .search {
+  margin: 20px 10px 20px 0px;
+  position: relative;
+}
+
+.navbar .search input {
+  border: 0px;
+  margin: 10px;
+  height: 25px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.navbar .search ion-icon {
+  position: absolute;
+  right: -10px;
+  top: 15px;
+}
+
+.navbar .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 5px;
+}
+
+.navbar .profile .pic {
+  position: relative;
+}
+
+.navbar .profile .pic span {
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+}
+
+.navbar .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar .contacts div {
+  margin: 0px 5px;
+}
+
+.navbar .contacts .contact {
+  margin: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .contacts .contact h4 {
+  margin: 0px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.navbar .contacts .contact p {
+  margin: 0px;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.09em;
+}
+
+.status {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.small {
+  height: 6px;
+  width: 6px;
+  border: 3px solid white;
+}
+
+.active {
+  background-color: yellowgreen;
+}
+
+.unknown {
+  background-color: #ffee57;
+}
+
+.deactive {
+  background-color: #f83848;
+}
+
+h4 {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+
+.container .top_nav_bar {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #c0c0c00a;
+}
+
+.container .top_nav_bar .user_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .top_nav_bar .user_detail img {
+  margin-right: 20px;
+}
+
+.container .top_nav_bar .user_detail .details div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.container .top_nav_bar .user_detail .details div p {
+  font-size: 10px;
+  margin-right: 15px;
+  font-style: italic;
+}
+
+.container .top_nav_bar .user_action ion-icon {
+  border: 1px solid #b8b8b8;
+  padding: 8px;
+  margin: 0px 2px;
+  border-radius: 100px;
+}
+
+.container .top_nav_bar .user_action ion-icon:hover {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.container .chats {
+  margin: 20px 30px 0px 30px;
+}
+
+.container .chats .chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 15px 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .chats .chat h2 {
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  max-width: 50vw;
+  border-radius: 3px;
+  margin: 0px 20px;
+  padding: 10px;
+  font-size: 13px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0px 6px 0 rgba(139, 139, 139, 0.178), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
+          box-shadow: 0 0px 6px 0 rgba(139, 139, 139, 0.178), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
+}
+
+.container .chats .chat p {
+  font-size: 10px;
+}
+
+.container .chats .myside {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse wrap;
+          flex-flow: row-reverse wrap;
+}
+
+.container .action {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px;
+}
+
+.container .action input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 50px;
+  padding-right: 150px;
+  border-radius: 5px;
+  border: 1px solid rgba(27, 27, 27, 0.295);
+  background-color: #fff;
+  -webkit-box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
+          box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  padding-left: 5px;
+}
+
+.container .action .action_set {
+  position: absolute;
+  right: 5px;
+  top: 13px;
+}
+
+.container .action .action_set ion-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.container .action .action_set ion-icon:hover {
+  color: pink;
+  cursor: pointer;
+  background-color: rgba(0, 168, 56, 0.322);
+  border-radius: 100px;
+  -webkit-transition: all .20s linear;
+  transition: all .20s linear;
+}
+/*# sourceMappingURL=style.css.map */
