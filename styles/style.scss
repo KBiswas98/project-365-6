@@ -10,6 +10,8 @@ $screen_computer: 700px;
 
 $p_size: 10px;
 $h4_size: 13px;
+$space: 20px;
+$count: 1;
 
 @mixin tablet {
   @media screen and (max-width: $screen_tablet) {
@@ -206,9 +208,9 @@ p {
 
       @include phone {
         .action_icon {
-          display: none !important;
+          display: none;
+          position: absolute;
         }
-
         .top_right_menu {
           // margin-left: -20px;
           display: inline-block !important;
@@ -304,12 +306,7 @@ p {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      // padding: 30px;
 
-      // @include phone {
-      //   margin-left: 10px;
-      //   margin-right: 10px;
-      // }
       #massageBox {
         // min-width: 300px;
         flex: 1;
@@ -326,11 +323,10 @@ p {
         padding-top: 10px;
 
         margin: 0px 0px;
-        
+
         @include tablet {
           padding-right: 100px;
         }
-
       }
 
       .action_set {
@@ -348,7 +344,7 @@ p {
           }
 
           .set_icon {
-            display: none !important;
+            display: none;
           }
         }
 
@@ -367,4 +363,12 @@ p {
       }
     }
   }
+}
+
+/****** daynamic class **************/
+.bottom_menu_popup {
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.034);
 }

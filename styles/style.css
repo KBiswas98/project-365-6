@@ -241,7 +241,8 @@ p {
 
 @media screen and (max-width: 500px) {
   .container .top_nav_bar .user_action .action_icon {
-    display: none !important;
+    display: none;
+    position: absolute;
   }
   .container .top_nav_bar .user_action .top_right_menu {
     display: inline-block !important;
@@ -396,7 +397,7 @@ p {
     display: inline-block !important;
   }
   .container .holder .action .action_set .set_icon {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -412,5 +413,13 @@ p {
   border-radius: 100px;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+
+/****** daynamic class **************/
+.bottom_menu_popup {
+  display: inline-block;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
+          box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
 }
 /*# sourceMappingURL=style.css.map */
