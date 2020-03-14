@@ -25,6 +25,12 @@ body {
   background-color: #8f8f8f0a;
 }
 
+@media screen and (max-width: 700px) {
+  .navbar {
+    display: none !important;
+  }
+}
+
 .navbar .search {
   margin: 20px 10px 20px 0px;
   position: relative;
@@ -156,8 +162,8 @@ p {
           flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -195,6 +201,20 @@ p {
           align-items: center;
 }
 
+.container .top_nav_bar .user_detail #menu {
+  font-size: 20px;
+  height: 30px;
+  margin-left: -10px;
+  margin-right: 10px;
+  display: none !important;
+}
+
+@media screen and (max-width: 700px) {
+  .container .top_nav_bar .user_detail #menu {
+    display: inline-block !important;
+  }
+}
+
 .container .top_nav_bar .user_detail img {
   margin-right: 20px;
 }
@@ -215,6 +235,19 @@ p {
   font-style: italic;
 }
 
+.container .top_nav_bar .user_action .top_right_menu {
+  display: none !important;
+}
+
+@media screen and (max-width: 500px) {
+  .container .top_nav_bar .user_action .action_icon {
+    display: none !important;
+  }
+  .container .top_nav_bar .user_action .top_right_menu {
+    display: inline-block !important;
+  }
+}
+
 .container .top_nav_bar .user_action ion-icon {
   border: 1px solid #b8b8b8;
   padding: 8px;
@@ -230,7 +263,26 @@ p {
 }
 
 .container .chats {
-  margin: 20px 30px 0px 30px;
+  margin: 0px 30px 0px 0px;
+  height: 120vh;
+  overflow-y: scroll;
+}
+
+.container .chats::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.container .chats::-webkit-scrollbar-track {
+  background: #f1f1f102;
+}
+
+.container .chats::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.container .chats::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .container .chats .chat {
@@ -247,12 +299,15 @@ p {
           align-items: center;
 }
 
+.container .chats .chat img {
+  margin: 0px 20px;
+}
+
 .container .chats .chat h2 {
   letter-spacing: 0.05em;
   font-weight: 600;
   max-width: 50vw;
   border-radius: 3px;
-  margin: 0px 20px;
   padding: 10px;
   font-size: 13px;
   background-color: #fff;
@@ -262,6 +317,17 @@ p {
 
 .container .chats .chat p {
   font-size: 10px;
+  margin: 10px 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .container .chats .chat img {
+    margin: 10px;
+    margin-left: 20px;
+  }
+  .container .chats .chat p {
+    margin: 10px 20px;
+  }
 }
 
 .container .chats .myside {
@@ -271,7 +337,13 @@ p {
           flex-flow: row-reverse wrap;
 }
 
-.container .action {
+.container .holder {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+.container .holder .action {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,43 +355,62 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 30px;
 }
 
-.container .action input {
+.container .holder .action #massageBox {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   height: 50px;
-  padding-right: 150px;
+  padding-right: 185px;
   border-radius: 5px;
   border: 1px solid rgba(27, 27, 27, 0.295);
   background-color: #fff;
   -webkit-box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
           box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
   font-size: 16px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   padding-left: 5px;
+  padding-top: 10px;
+  margin: 0px 0px;
 }
 
-.container .action .action_set {
+@media screen and (max-width: 700px) {
+  .container .holder .action #massageBox {
+    padding-right: 100px;
+  }
+}
+
+.container .holder .action .action_set {
   position: absolute;
   right: 5px;
   top: 13px;
 }
 
-.container .action .action_set ion-icon {
+.container .holder .action .action_set .more {
+  display: none !important;
+}
+
+@media screen and (max-width: 700px) {
+  .container .holder .action .action_set .more {
+    display: inline-block !important;
+  }
+  .container .holder .action .action_set .set_icon {
+    display: none !important;
+  }
+}
+
+.container .holder .action .action_set ion-icon {
   font-size: 20px;
   margin-right: 10px;
   padding: 5px;
 }
 
-.container .action .action_set ion-icon:hover {
-  color: pink;
+.container .holder .action .action_set ion-icon:hover {
   cursor: pointer;
   background-color: rgba(0, 168, 56, 0.322);
   border-radius: 100px;
-  -webkit-transition: all .20s linear;
-  transition: all .20s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 /*# sourceMappingURL=style.css.map */

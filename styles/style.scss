@@ -47,6 +47,11 @@ body {
 .navbar {
   padding: 10px 30px 10px 10px;
   background-color: #8f8f8f0a;
+
+  @include tablet {
+    display: none !important;
+  }
+
   .search {
     margin: 20px 10px 20px 0px;
     position: relative;
@@ -149,7 +154,7 @@ p {
 .container {
   display: flex;
   flex: 1;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: space-between;
   height: 100vh;
 
@@ -164,6 +169,18 @@ p {
       display: flex;
       flex-flow: row wrap;
       align-items: center;
+
+      #menu {
+        font-size: 20px;
+        height: 30px;
+        margin-left: -10px;
+        margin-right: 10px;
+        display: none !important;
+
+        @include tablet {
+          display: inline-block !important;
+        }
+      }
 
       img {
         margin-right: 20px;
@@ -183,6 +200,21 @@ p {
       }
     }
     .user_action {
+      .top_right_menu {
+        display: none !important;
+      }
+
+      @include phone {
+        .action_icon {
+          display: none !important;
+        }
+
+        .top_right_menu {
+          // margin-left: -20px;
+          display: inline-block !important;
+        }
+      }
+
       ion-icon {
         // background-color: rgb(180, 180, 180);
         border: 1px solid rgb(184, 184, 184);
@@ -200,27 +232,62 @@ p {
   }
 
   .chats {
-    margin: 20px 30px 0px 30px;
+    margin: 0px 30px 0px 0px;
+    height: 120vh;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f102;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
 
     .chat {
       display: flex;
       flex-flow: row wrap;
       margin: 15px 10px;
       align-items: center;
+
+      img {
+        margin: 0px 20px;
+      }
+
       h2 {
         letter-spacing: 0.05em;
         font-weight: 600;
         max-width: 50vw;
         border-radius: 3px;
-        margin: 0px 20px;
         padding: 10px;
         font-size: $h4_size;
         background-color: #fff;
-        box-shadow: 0 0px 6px 0 rgba(139, 139, 139, 0.178), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
+        box-shadow: 0 0px 6px 0 rgba(139, 139, 139, 0.178),
+          0 6px 20px 0 rgba(0, 0, 0, 0.034);
       }
 
-      p{
+      p {
         font-size: $p_size;
+        margin: 10px 10px;
+      }
+
+      @include tablet {
+        img {
+          margin: 10px;
+          margin-left: 20px;
+        }
+
+        p {
+          margin: 10px 20px;
+        }
       }
     }
 
@@ -229,42 +296,73 @@ p {
     }
   }
 
-  .action {
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 30px;
-    input {
-      flex: 1;
-      height: 50px;
-      padding-right: 150px;
-      border-radius: 5px;
-      border: 1px solid rgba(27, 27, 27, 0.295);
-      background-color: #fff;
-      box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.034);
-      font-size: 16px;
-      letter-spacing: 0.06em;
-      padding-left: 5px;
-    }
+  .holder {
+    position: sticky;
+    bottom: 0;
+    .action {
+      position: relative;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      // padding: 30px;
 
-    .action_set {
-      position: absolute;
-      right: 5px;
-      top: 13px;
+      // @include phone {
+      //   margin-left: 10px;
+      //   margin-right: 10px;
+      // }
+      #massageBox {
+        // min-width: 300px;
+        flex: 1;
+        height: 50px;
+        padding-right: 185px;
+        border-radius: 5px;
+        border: 1px solid rgba(27, 27, 27, 0.295);
+        background-color: #fff;
+        box-shadow: 0 0px 25px 0 rgba(139, 139, 139, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.034);
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        padding-left: 5px;
+        padding-top: 10px;
 
-      ion-icon {
-        font-size: 20px;
-        margin-right: 10px;
-        padding: 5px;
+        margin: 0px 0px;
+        
+        @include tablet {
+          padding-right: 100px;
+        }
 
+      }
 
-        &:hover {
-          color: pink;
-          cursor: pointer;
-          background-color: rgba(0, 168, 56, 0.322);
-          border-radius: 100px;
-          transition: all .20s linear;
+      .action_set {
+        position: absolute;
+        right: 5px;
+        top: 13px;
+
+        .more {
+          display: none !important;
+        }
+
+        @include tablet {
+          .more {
+            display: inline-block !important;
+          }
+
+          .set_icon {
+            display: none !important;
+          }
+        }
+
+        ion-icon {
+          font-size: 20px;
+          margin-right: 10px;
+          padding: 5px;
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(0, 168, 56, 0.322);
+            border-radius: 100px;
+            transition: all 0.2s linear;
+          }
         }
       }
     }
